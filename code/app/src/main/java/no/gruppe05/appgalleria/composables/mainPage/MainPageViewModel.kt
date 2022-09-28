@@ -12,7 +12,7 @@ class MainPageViewModel() : ViewModel() {
 
     init {
 
-        var tempApp = ApplicationInformation(
+        val tempApp = ApplicationInformation(
             android_id = "com.example.Filler NOT VALID",
             android_title = "FillerTitle",
             android_description = "FillerDescription",
@@ -22,7 +22,10 @@ class MainPageViewModel() : ViewModel() {
             android_max_installs = 0
             )
 
-
+        while (currentlyShownApps.size > 10) {
+            currentlyShownApps.add(tempApp)
+            allAppsFromDatabase.add(tempApp)
+        }
 
 
     }
