@@ -26,17 +26,25 @@ import no.gruppe05.appgalleria.data.ApplicationInformation
 @Composable
 fun MainPage(mainPageViewModel: MainPageViewModel = viewModel()) {
 
+    //Scaffold consists of three main parts, topBar, bottomBar, and the main page
+    // top bar will extend from the top, bottombar from the bottom, with the main page
+    // consisting of the rest of the available space
     Scaffold(
         topBar = { MainPageTopbar()},
         bottomBar = { MainPageBottomBar()}
     ) {
+        //main page composables go here
         GalleryOfApps(mainPageViewModel.currentlyShownApps)
     }
 }
 
+/**
+ * Contains the main grid of applications
+ */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun GalleryOfApps(appList: List<ApplicationInformation>) {
+    //Lazy vertical grid is a grid that can be scrolled vertically
     LazyVerticalGrid(
         cells = GridCells.Fixed(4),
         contentPadding = PaddingValues(all = 4.dp),
@@ -48,6 +56,9 @@ fun GalleryOfApps(appList: List<ApplicationInformation>) {
     )
 }
 
+/**
+ * Preview function, shows up on the right side. Doesn't look too amazing since it might lack the apps
+ */
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun PreviewMain() {

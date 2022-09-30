@@ -11,7 +11,6 @@ data class ApplicationInformation(
     var android_icon: String = "",
     var android_avg_rating: Double = 0.0,
     var android_description: String = "",
-    var android_max_installs: Int = 0,
-    var priority: Int = 0
+    var android_max_installs: Int = 0
 
 )
