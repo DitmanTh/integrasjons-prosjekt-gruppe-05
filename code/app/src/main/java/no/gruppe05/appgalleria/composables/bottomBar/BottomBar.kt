@@ -1,4 +1,4 @@
-package no.gruppe05.appgalleria.composables.topBar
+package no.gruppe05.appgalleria.composables.bottomBar
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -7,8 +7,6 @@ import androidx.compose.runtime.Composable
  * TODO fill in the rest of this part of the application
  */
 @Composable
-fun MainPageTopbar() {
-    
+fun MainPageBottomBar() {
     Text(text = "Yeet")
-
 }

@@ -10,8 +10,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import no.gruppe05.appgalleria.composables.mainPage.MainPage
 import no.gruppe05.appgalleria.ui.theme.AppGalleriaTheme
 
+/**
+ * MAIN APPLICATION
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    MainPage()
                 }
             }
         }
@@ -38,6 +42,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     AppGalleriaTheme {
-        Greeting("Android")
+        MainPage()
     }
 }
